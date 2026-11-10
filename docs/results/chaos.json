@@ -1,0 +1,43 @@
+{
+  "when": "2026-11-10T07:04:29.509Z",
+  "crash_recovery": {
+    "requests_planned": 600,
+    "killed_with_sigkill_after_responses": 200,
+    "requests_with_unknown_outcome": 400,
+    "payments_committed_at_crash": 200,
+    "unknown_outcome_retries": {
+      "already_committed_replayed": 0,
+      "not_committed_created_on_retry": 400
+    },
+    "replay_id_mismatches": 0,
+    "final": {
+      "payments": 600,
+      "distinct_payment_ids": 600,
+      "ledger_transactions": 600,
+      "duplicates": 0
+    },
+    "process_restart_to_healthy_ms": 377,
+    "kill_to_healthy_ms": 835,
+    "reconciliation_ok": true,
+    "reconciliation_discrepancies": 0
+  },
+  "webhook_outage": {
+    "events": 50,
+    "during_outage_after_2_5s": {
+      "delivered": 0,
+      "max_attempts": 4,
+      "dead": 0
+    },
+    "after_receiver_restored": {
+      "delivered": 50,
+      "dead": 0,
+      "max_attempts": 5,
+      "total_attempts": 250
+    },
+    "time_to_drain_after_receiver_restored_ms": 1417,
+    "unique_events_received": 50,
+    "duplicate_deliveries": 0,
+    "invalid_signatures": 0,
+    "reconciliation_ok": true
+  }
+}

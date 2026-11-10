@@ -1,0 +1,45 @@
+PASS tests/reconciliation.test.ts
+PASS tests/webhooks.test.ts (5.068 s)
+PASS tests/ledger.test.ts
+PASS tests/concurrency.test.ts
+PASS tests/api.test.ts
+PASS tests/idempotency.test.ts
+PASS tests/failures.test.ts
+PASS tests/fraud.test.ts
+PASS tests/stateMachine.test.ts
+--------------------|---------|----------|---------|---------|-------------------
+File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------|---------|----------|---------|---------|-------------------
+All files           |   92.82 |     88.2 |    91.2 |   95.16 |                   
+ src                |   88.11 |    82.97 |   86.95 |   89.38 |                   
+  app.ts            |   95.31 |       85 |     100 |      96 | 70-71             
+  cache.ts          |   80.76 |      100 |   68.75 |   85.71 | 52-54             
+  config.ts         |     100 |    81.81 |     100 |     100 | 33-35             
+  db.ts             |   71.42 |       50 |   83.33 |   69.56 | 20-27             
+  errors.ts         |     100 |      100 |     100 |     100 |                   
+  util.ts           |   93.75 |     87.5 |     100 |     100 | 7                 
+ src/fraud          |   95.45 |    93.75 |     100 |     100 |                   
+  rules.ts          |   95.45 |    93.75 |     100 |     100 | 25                
+ src/ledger         |   96.87 |     91.3 |     100 |     100 |                   
+  ledger.ts         |   96.87 |     91.3 |     100 |     100 | 25,30             
+ src/payments       |   94.96 |    92.53 |   90.47 |   99.09 |                   
+  processor.ts      |   76.92 |    85.71 |      50 |      90 | 14                
+  service.ts        |   98.26 |    95.55 |   94.11 |     100 | 35,59             
+  stateMachine.ts   |   81.81 |    86.66 |     100 |     100 | 21,33             
+ src/reconciliation |     100 |      100 |     100 |     100 |                   
+  reconcile.ts      |     100 |      100 |     100 |     100 |                   
+ src/webhooks       |   94.36 |    81.08 |     100 |   94.91 |                   
+  signature.ts      |     100 |      100 |     100 |     100 |                   
+  worker.ts         |    93.1 |    74.07 |     100 |   93.75 | 94-96             
+--------------------|---------|----------|---------|---------|-------------------
+=============================== Coverage summary ===============================
+Statements   : 92.82% ( 388/418 )
+Branches     : 88.2% ( 172/195 )
+Functions    : 91.2% ( 83/91 )
+Lines        : 95.16% ( 315/331 )
+================================================================================
+Test Suites: 9 passed, 9 total
+Tests:       63 passed, 63 total
+Snapshots:   0 total
+Time:        18.328 s, estimated 24 s
+Ran all test suites.

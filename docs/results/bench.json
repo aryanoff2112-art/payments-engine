@@ -1,0 +1,95 @@
+{
+  "when": "2026-11-10T07:06:09.873Z",
+  "node": "v22.23.4",
+  "results": [
+    {
+      "scenario": "distinct_merchants_low_concurrency",
+      "description": "Same as distinct_merchants but only 4 connections (latency with little queueing)",
+      "connections": 4,
+      "duration_s": 10,
+      "requests_per_sec_avg": 103.6,
+      "total_requests": 1036,
+      "latency_ms": {
+        "avg": 37.97,
+        "p50": 35,
+        "p90": 58,
+        "p97_5": 81,
+        "p99": 98,
+        "max": 143
+      },
+      "http_2xx": 1036,
+      "errors": 0,
+      "timeouts": 0,
+      "non2xx": 0,
+      "payments_created": 1040
+    },
+    {
+      "scenario": "distinct_merchants",
+      "description": "POST /v1/payments, unique key, 200 different merchants (no single hot account)",
+      "connections": 32,
+      "duration_s": 10,
+      "requests_per_sec_avg": 134.9,
+      "total_requests": 1349,
+      "latency_ms": {
+        "avg": 232.83,
+        "p50": 182,
+        "p90": 444,
+        "p97_5": 634,
+        "p99": 779,
+        "max": 1099
+      },
+      "http_2xx": 1349,
+      "errors": 0,
+      "timeouts": 0,
+      "non2xx": 0,
+      "payments_created": 1381
+    },
+    {
+      "scenario": "single_hot_merchant",
+      "description": "POST /v1/payments, unique key, ONE merchant (every payment locks the same account rows)",
+      "connections": 32,
+      "duration_s": 10,
+      "requests_per_sec_avg": 117,
+      "total_requests": 1170,
+      "latency_ms": {
+        "avg": 267.53,
+        "p50": 245,
+        "p90": 447,
+        "p97_5": 598,
+        "p99": 691,
+        "max": 857
+      },
+      "http_2xx": 1170,
+      "errors": 0,
+      "timeouts": 0,
+      "non2xx": 0,
+      "payments_created": 1202
+    },
+    {
+      "scenario": "idempotent_replay",
+      "description": "POST /v1/payments replaying one already-processed key (Redis fast path)",
+      "connections": 32,
+      "duration_s": 10,
+      "requests_per_sec_avg": 2876.4,
+      "total_requests": 28760,
+      "latency_ms": {
+        "avg": 10.6,
+        "p50": 9,
+        "p90": 17,
+        "p97_5": 27,
+        "p99": 37,
+        "max": 78
+      },
+      "http_2xx": 28760,
+      "errors": 0,
+      "timeouts": 0,
+      "non2xx": 0,
+      "payments_created": 0
+    }
+  ],
+  "payments_for_replayed_key": 1,
+  "reconciliation_after_load": {
+    "ok": true,
+    "discrepancies": 0
+  }
+}
