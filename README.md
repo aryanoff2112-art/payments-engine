@@ -1,4 +1,4 @@
-# Reliable Payments Processing Engine (a mini Stripe backend)
+# Reliable Payments Processing Engine (a mini Stripe inspired backend)
 
 A TypeScript/Node.js backend that processes **simulated** payments reliably: idempotent requests, a double-entry
 ledger enforced by the database, a transactional outbox with signed and retried webhooks, a payment state machine,
