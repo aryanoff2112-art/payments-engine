@@ -19,7 +19,7 @@ Every figure under "Measured results" below is historical in that sense. See `do
 commands that replace them. Until they are run and this table is updated, treat this project as **in progress**.
 
 > **Simulated only.** Payment methods are test tokens (`tok_success`, `tok_decline`, ...). The API rejects anything
-> that is not `tok_*`, so card numbers cannot be submitted or stored.
+> that is not `tok_*`, so card numbers cannot be submitted/stored.
 
 ## Quick start
 
