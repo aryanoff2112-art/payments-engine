@@ -3,7 +3,7 @@
 A TypeScript/Node.js backend that processes **simulated** payments reliably: idempotent requests, a double-entry
 ledger enforced by the database, a transactional outbox with signed along with retried webhooks, a payment state machine,
 rule-based fraud scoring and a reconciliation engine. The goal is for it to be **proved** by tests, a load test and a
-crash test. Those results are not yet established for the current code: see *Verification status* below.
+crash test. Those results are not yet established for the current code: see *Verification status* below :-
 
 ## Verification status
 
